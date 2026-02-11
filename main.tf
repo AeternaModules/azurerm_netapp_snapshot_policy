@@ -1,5 +1,5 @@
-resource "azurerm_netapp_snapshot_policy" "netapp_snapshot_policys" {
-  for_each = var.netapp_snapshot_policys
+resource "azurerm_netapp_snapshot_policy" "netapp_snapshot_policies" {
+  for_each = var.netapp_snapshot_policies
 
   account_name        = each.value.account_name
   enabled             = each.value.enabled

@@ -1,6 +1,6 @@
-variable "netapp_snapshot_policys" {
+variable "netapp_snapshot_policies" {
   description = <<EOT
-Map of netapp_snapshot_policys, attributes below
+Map of netapp_snapshot_policies, attributes below
 Required:
     - account_name
     - enabled
@@ -45,7 +45,7 @@ EOT
       snapshots_to_keep = number
     }))
     monthly_schedule = optional(object({
-      days_of_month     = set(string)
+      days_of_month     = set(number)
       hour              = number
       minute            = number
       snapshots_to_keep = number
