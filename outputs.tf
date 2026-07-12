@@ -1,45 +1,41 @@
-output "netapp_snapshot_policies" {
-  description = "All netapp_snapshot_policy resources"
-  value       = azurerm_netapp_snapshot_policy.netapp_snapshot_policies
-}
 output "netapp_snapshot_policies_account_name" {
-  description = "List of account_name values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.account_name]
+  description = "Map of account_name values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.account_name }
 }
 output "netapp_snapshot_policies_daily_schedule" {
-  description = "List of daily_schedule values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.daily_schedule]
+  description = "Map of daily_schedule values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.daily_schedule }
 }
 output "netapp_snapshot_policies_enabled" {
-  description = "List of enabled values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.enabled]
+  description = "Map of enabled values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.enabled }
 }
 output "netapp_snapshot_policies_hourly_schedule" {
-  description = "List of hourly_schedule values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.hourly_schedule]
+  description = "Map of hourly_schedule values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.hourly_schedule }
 }
 output "netapp_snapshot_policies_location" {
-  description = "List of location values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.location]
+  description = "Map of location values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.location }
 }
 output "netapp_snapshot_policies_monthly_schedule" {
-  description = "List of monthly_schedule values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.monthly_schedule]
+  description = "Map of monthly_schedule values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.monthly_schedule }
 }
 output "netapp_snapshot_policies_name" {
-  description = "List of name values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.name]
+  description = "Map of name values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.name }
 }
 output "netapp_snapshot_policies_resource_group_name" {
-  description = "List of resource_group_name values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.resource_group_name]
+  description = "Map of resource_group_name values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.resource_group_name }
 }
 output "netapp_snapshot_policies_tags" {
-  description = "List of tags values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.tags]
+  description = "Map of tags values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.tags }
 }
 output "netapp_snapshot_policies_weekly_schedule" {
-  description = "List of weekly_schedule values across all netapp_snapshot_policies"
-  value       = [for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : v.weekly_schedule]
+  description = "Map of weekly_schedule values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.weekly_schedule }
 }
 
