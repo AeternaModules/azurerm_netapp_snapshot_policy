@@ -1,3 +1,7 @@
+output "netapp_snapshot_policies_id" {
+  description = "Map of id values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
+  value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.id }
+}
 output "netapp_snapshot_policies_account_name" {
   description = "Map of account_name values across all netapp_snapshot_policies, keyed the same as var.netapp_snapshot_policies"
   value       = { for k, v in azurerm_netapp_snapshot_policy.netapp_snapshot_policies : k => v.account_name }
